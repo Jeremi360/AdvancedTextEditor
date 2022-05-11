@@ -13,9 +13,11 @@
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-H3.tres" type="DynamicFont" id=11]
 
 [node name="PopupHelp" type="WindowDialog"]
+visible = true
 margin_right = 1004.0
 margin_bottom = 590.0
 rect_min_size = Vector2( 500, 100 )
+window_title = "Help"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,7 +28,7 @@ anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarkdownHelp" type="HSplitContainer" parent="HelperContainer"]
+[node name="AT\'s Markdown" type="HSplitContainer" parent="HelperContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -34,7 +36,7 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="MarkdownCode" type="TextEdit" parent="HelperContainer/MarkdownHelp"]
+[node name="MarkdownCode" type="TextEdit" parent="HelperContainer/AT\'s Markdown"]
 margin_right = 684.0
 margin_bottom = 554.0
 size_flags_horizontal = 3
@@ -107,7 +109,6 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
-scroll_vertical = 30.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -115,7 +116,7 @@ __meta__ = {
 text_file = "res://addons/advanced-text-editor/docs/markdown.md"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json", "res://addons/advanced-text/highlights/markdown.json" ]
 
-[node name="MarkdownPreview" type="RichTextLabel" parent="HelperContainer/MarkdownHelp"]
+[node name="MarkdownPreview" type="RichTextLabel" parent="HelperContainer/AT\'s Markdown"]
 margin_left = 696.0
 margin_right = 996.0
 margin_bottom = 554.0
@@ -311,7 +312,7 @@ test_dict.key1 = <test_dict.key1>
 markup = "markdown"
 headers_fonts = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ]
 
-[node name="RenPyHelp" type="HSplitContainer" parent="HelperContainer"]
+[node name="RenPy" type="HSplitContainer" parent="HelperContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -320,7 +321,7 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="RenPyCode" type="TextEdit" parent="HelperContainer/RenPyHelp"]
+[node name="RenPyCode" type="TextEdit" parent="HelperContainer/RenPy"]
 margin_right = 684.0
 margin_bottom = 554.0
 size_flags_horizontal = 3
@@ -380,7 +381,6 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
-scroll_vertical = 17.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -388,7 +388,7 @@ __meta__ = {
 text_file = "res://addons/advanced-text-editor/docs/renpy.rpy"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
-[node name="RenPy" type="RichTextLabel" parent="HelperContainer/RenPyHelp"]
+[node name="RenPy" type="RichTextLabel" parent="HelperContainer/RenPy"]
 margin_left = 696.0
 margin_right = 996.0
 margin_bottom = 554.0
@@ -542,7 +542,7 @@ test_dict.key1 = <test_dict.key1>
 markup = "renpy"
 headers_fonts = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ) ]
 
-[node name="BBCodeHelp" type="HSplitContainer" parent="HelperContainer"]
+[node name="Extendet BBCode" type="HSplitContainer" parent="HelperContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -557,7 +557,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BBCodeCode" type="TextEdit" parent="HelperContainer/BBCodeHelp"]
+[node name="BBCodeCode" type="TextEdit" parent="HelperContainer/Extendet BBCode"]
 margin_right = 684.0
 margin_bottom = 554.0
 size_flags_horizontal = 3
@@ -614,7 +614,6 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
-scroll_vertical = 14.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -622,7 +621,7 @@ __meta__ = {
 text_file = "res://addons/advanced-text-editor/docs/bbcode.txt"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
-[node name="BBCode" type="RichTextLabel" parent="HelperContainer/BBCodeHelp"]
+[node name="BBCode" type="RichTextLabel" parent="HelperContainer/Extendet BBCode"]
 margin_left = 696.0
 margin_right = 996.0
 margin_bottom = 554.0

@@ -5,7 +5,7 @@ const files_ram_path := "res://addons/advanced-text-editor/ram.data"
 
 var files_ram := {}
 var mode := "file"
-var markups := {"markdown":0, "renpy":1, "bbcode":2}
+var markups := {"markdown":0, "renpy":1, "bbcode":2, "none":0}
 var current_markup := "markdown"
 var f := File.new()
 var current_f_data := {}

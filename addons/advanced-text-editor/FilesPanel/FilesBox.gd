@@ -37,20 +37,19 @@ func new_file_tab(file_path : String, select: bool = false):
 	f_button.pressed = true
 
 	var f_close_button : Button = f_box.get_node("CloseButton")
-	# f_close_button.connect("pressed", self, "_on_file_close_button_pressed", [f_box])
 	f_close_button.text = ""
 	f_close_button.icon = get_icon("Close", "EditorIcons")
-
+	
 	var f_modified_icon : TextureRect = f_box.get_node("ModifiedIcon")
 	f_modified_icon.texture = get_icon("Edit", "EditorIcons")
 	f_modified_icon.hide()
-
+	
 	var text := ""
 	if f.file_exists(file_path):
 		f.open(file_path, File.READ)
 		text = f.get_as_text()
 		f.close()
-
+		
 	var f_data := {
 		"f_button": f_button,
 		"file_name": file_name,
@@ -60,10 +59,16 @@ func new_file_tab(file_path : String, select: bool = false):
 		"modified": false,
 		"modified_icon": f_modified_icon,
 	}
-
+	
+	f_close_button.connect("pressed", self, "_on_file_close_button_pressed", [f_box])
 	f_button.connect("pressed", TextEditorHelper, "select_file", [f_data])
 
 	open_files[file_path] = f_box
 	TextEditorHelper.files_ram[f_box] = f_data
 	if select:
 		TextEditorHelper.select_file(f_data)
+
+func _on_file_close_button_pressed(f_box):
+	TextEditorHelper.files_ram.erase(f_box)
+	f_box.queue_free()
+

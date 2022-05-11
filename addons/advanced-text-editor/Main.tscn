@@ -4,7 +4,7 @@
 [ext_resource path="res://addons/advanced-text-editor/ToolBar/ToolBar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/advanced-text-editor/EditContainer/EditContainer.tscn" type="PackedScene" id=3]
 
-[node name="MarkupEdit" type="Control"]
+[node name="AdvancedTextEditor" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
