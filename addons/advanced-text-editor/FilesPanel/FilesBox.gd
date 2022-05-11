@@ -2,6 +2,7 @@ tool
 extends VBoxContainer
 
 export var file_box_scene : PackedScene
+onready var confirmation_dialog := $Node/ConfirmationDialog
 
 var b_group := ButtonGroup.new()
 var f := File.new()
@@ -10,6 +11,7 @@ var open_files := {}
 func _ready():
 	# maybe it should be called in other way as session_loaded can be called before ui is ready
 	TextEditorHelper.connect("session_loaded", self, "_on_session_loaded")
+	confirmation_dialog.connect("confirmed", self, "_on_confirmed")
 
 func _on_session_loaded():
 	for file in TextEditorHelper.files_ram:
@@ -69,6 +71,14 @@ func new_file_tab(file_path : String, select: bool = false):
 		TextEditorHelper.select_file(f_data)
 
 func _on_file_close_button_pressed(f_box):
+	if TextEditorHelper.files_ram[f_box]["modified"]:
+		confirmation_dialog.popup_centered(Vector2(390, 75))
+		return
+		
+	_on_confirmed(f_box)
+
+func _on_confirmed(f_box):
 	TextEditorHelper.files_ram.erase(f_box)
+	open_files.erase(f_box["path"])
 	f_box.queue_free()
 

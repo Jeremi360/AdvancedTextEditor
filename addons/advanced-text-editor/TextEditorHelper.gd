@@ -41,6 +41,6 @@ func select_file(f_data:Dictionary):
 	current_f_data = f_data
 	emit_signal("selected_file", current_f_data)
 
-func update_data(key:String, value:String):
+func update_data(key:String, value):
 	current_f_data[key] = value
 	emit_signal("update_preview", current_f_data)

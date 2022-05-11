@@ -85,10 +85,21 @@ custom_constants/separation = 5
 script = ExtResource( 2 )
 file_box_scene = ExtResource( 1 )
 
+[node name="Node" type="Node" parent="ScrollContainer/Panel/FilesBox"]
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="ScrollContainer/Panel/FilesBox/Node"]
+visible = true
+margin_left = 328.0
+margin_top = 280.0
+margin_right = 717.0
+margin_bottom = 355.0
+window_title = "Close Modifed File"
+dialog_text = "You realy want to close modified file without saving it ?
+All changes will be lost !!!"
+
 [node name="Node" type="Node" parent="."]
 
 [node name="FileDialog" type="FileDialog" parent="Node"]
-visible = true
 margin_left = 240.0
 margin_top = 186.0
 margin_right = 801.0
