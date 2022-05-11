@@ -107,11 +107,12 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
+scroll_vertical = 30.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-text_file = "res://addons/advanced-text/help/markdown.md"
+text_file = "res://addons/advanced-text-editor/docs/markdown.md"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json", "res://addons/advanced-text/highlights/markdown.json" ]
 
 [node name="MarkdownPreview" type="RichTextLabel" parent="HelperContainer/MarkdownHelp"]
@@ -245,7 +246,7 @@ rainbow text
 
 "
 script = ExtResource( 10 )
-markup_text_file = "res://addons/advanced-text/help/markdown.md"
+markup_text_file = "res://addons/advanced-text-editor/docs/markdown.md"
 markup_text = "# Header Level 1
 ## Header Level 2
 ### Header Level 3
@@ -379,11 +380,12 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
+scroll_vertical = 17.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-text_file = "res://addons/advanced-text/help/renpy.rpy"
+text_file = "res://addons/advanced-text-editor/docs/renpy.rpy"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
 [node name="RenPy" type="RichTextLabel" parent="HelperContainer/RenPyHelp"]
@@ -488,7 +490,7 @@ shake
 fade
 rainbow"
 script = ExtResource( 10 )
-markup_text_file = "res://addons/advanced-text/help/renpy.rpy"
+markup_text_file = "res://addons/advanced-text-editor/docs/renpy.rpy"
 markup_text = "\"\"\"
 {h1}Header Level 1{/h1}
 {h2}Header Level 2{/h2}
@@ -612,11 +614,12 @@ shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
 selecting_enabled = false
 v_scroll_speed = 0.0
+scroll_vertical = 14.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-text_file = "res://addons/advanced-text/help/bbcode.txt"
+text_file = "res://addons/advanced-text-editor/docs/bbcode.txt"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
 [node name="BBCode" type="RichTextLabel" parent="HelperContainer/BBCodeHelp"]
@@ -715,7 +718,7 @@ fade
 rainbow
 "
 script = ExtResource( 10 )
-markup_text_file = "res://addons/advanced-text/help/bbcode.txt"
+markup_text_file = "res://addons/advanced-text-editor/docs/bbcode.txt"
 markup_text = "[h1]Header Level 1[/h1]
 [h2]Header Level 2[/h2]
 [h3]Header Level 3[/h3]
