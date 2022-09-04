@@ -1,12 +1,10 @@
 tool
 extends Control
 
-export (NodePath) onready var file_icon = get_node(file_icon) as TextureRect
-export (NodePath) onready var file_name = get_node(file_name) as Label
-
-export (NodePath) onready var preview_toggle = get_node(preview_toggle) as Button
-export (NodePath) onready var preview_switch = get_node(preview_switch) as OptionButton
-
+onready var file_icon := $HBoxContainer/LabelContainer/HBoxContainer/FileIcon
+onready var file_name := $HBoxContainer/LabelContainer/HBoxContainer/LabelContainer/HBoxContainer/FileName
+onready var preview_toggle := $HBoxContainer/PreviewOptions/PreviewToggle
+onready var preview_switch := $HBoxContainer/HBoxContainer/PreviewOptions/PreviewSwitch
 
 func _ready():
 	preview_toggle.connect("toggled", self, "_on_preview_toggled")

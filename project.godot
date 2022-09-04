@@ -67,7 +67,7 @@ advanced_text/default_vars="{
 	\"test_setting\": \"variable from project settings\"
 }"
 advanced_text_editor/enabled=true
-advanced_text_editor/preview_enabled="right"
+advanced_text_editor/preview_enabled="none"
 
 [application]
 

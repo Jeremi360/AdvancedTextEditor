@@ -52,7 +52,7 @@ rect_min_size = Vector2( 800, 500 )
 mouse_default_cursor_shape = 10
 
 [node name="Edit" type="TextEdit" parent="HSplitContainer/PreviewEditContainer/HSplit"]
-margin_right = 688.0
+margin_right = 800.0
 margin_bottom = 602.0
 rect_clip_content = true
 size_flags_horizontal = 3
@@ -75,6 +75,7 @@ configs_dict = {
 }
 
 [node name="PreviewRight" type="RichTextLabel" parent="HSplitContainer/PreviewEditContainer/HSplit"]
+visible = false
 margin_left = 700.0
 margin_right = 800.0
 margin_bottom = 602.0

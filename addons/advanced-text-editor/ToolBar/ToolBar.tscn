@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/advanced-text-editor/ToolBar/MarkupSwitch.gd" type="Script" id=1]
 [ext_resource path="res://addons/advanced-text/icons/ren16.png" type="Texture" id=2]
@@ -9,16 +9,22 @@
 [ext_resource path="res://addons/advanced-text-editor/Previews/PreviewOptions.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/advanced-text-editor/Help/HelpContainer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://addons/advanced-text-editor/ModeSwitch/ModeSwitch.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/advanced-text-editor/ToolBar/ToolBar.gd" type="Script" id=10]
 
 [node name="ToolBar" type="Control"]
 anchor_right = 1.0
 margin_bottom = 40.0
 mouse_filter = 2
 size_flags_horizontal = 3
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": true,
 "_editor_description_": ""
 }
+file_icon = null
+file_name = null
+preview_toggle = null
+preview_switch = null
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -28,13 +34,19 @@ __meta__ = {
 }
 
 [node name="ModeSwitch" parent="HBoxContainer" instance=ExtResource( 9 )]
+margin_right = 208.0
+files_toggle = Object(Button,"_import_path":NodePath(""),"pause_mode":0,"physics_interpolation_mode":0,"unique_name_in_owner":false,"process_priority":0,"visible":true,"modulate":Color( 1, 1, 1, 1 ),"self_modulate":Color( 1, 1, 1, 1 ),"show_behind_parent":false,"light_mask":1,"material":null,"use_parent_material":false,"anchor_left":0.0,"anchor_top":0.0,"anchor_right":0.0,"anchor_bottom":0.0,"margin_left":87.0,"margin_top":0.0,"margin_right":140.0,"margin_bottom":40.0,"grow_horizontal":1,"grow_vertical":1,"rect_min_size":Vector2( 0, 0 ),"rect_rotation":0.0,"rect_scale":Vector2( 1, 1 ),"rect_pivot_offset":Vector2( 0, 0 ),"rect_clip_content":false,"hint_tooltip":"","focus_neighbour_left":NodePath(""),"focus_neighbour_top":NodePath(""),"focus_neighbour_right":NodePath(""),"focus_neighbour_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":2,"mouse_filter":0,"mouse_default_cursor_shape":0,"input_pass_on_modal_close_click":true,"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"theme":null,"theme_type_variation":"","disabled":false,"toggle_mode":true,"shortcut_in_tooltip":true,"pressed":true,"action_mode":1,"button_mask":1,"enabled_focus_mode":2,"keep_pressed_outside":false,"shortcut":null,"group":null,"text":"File","icon":null,"flat":true,"clip_text":false,"align":1,"icon_align":0,"expand_icon":false,"script":null)
+
+node_toggle = Object(Button,"_import_path":NodePath(""),"pause_mode":0,"physics_interpolation_mode":0,"unique_name_in_owner":false,"process_priority":0,"visible":true,"modulate":Color( 1, 1, 1, 1 ),"self_modulate":Color( 1, 1, 1, 1 ),"show_behind_parent":false,"light_mask":1,"material":null,"use_parent_material":false,"anchor_left":0.0,"anchor_top":0.0,"anchor_right":0.0,"anchor_bottom":0.0,"margin_left":144.0,"margin_top":0.0,"margin_right":208.0,"margin_bottom":40.0,"grow_horizontal":1,"grow_vertical":1,"rect_min_size":Vector2( 0, 0 ),"rect_rotation":0.0,"rect_scale":Vector2( 1, 1 ),"rect_pivot_offset":Vector2( 0, 0 ),"rect_clip_content":false,"hint_tooltip":"","focus_neighbour_left":NodePath(""),"focus_neighbour_top":NodePath(""),"focus_neighbour_right":NodePath(""),"focus_neighbour_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":2,"mouse_filter":0,"mouse_default_cursor_shape":0,"input_pass_on_modal_close_click":true,"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"theme":null,"theme_type_variation":"","disabled":false,"toggle_mode":true,"shortcut_in_tooltip":true,"pressed":false,"action_mode":1,"button_mask":1,"enabled_focus_mode":2,"keep_pressed_outside":false,"shortcut":null,"group":null,"text":"Node","icon":null,"flat":true,"clip_text":false,"align":1,"icon_align":0,"expand_icon":false,"script":null)
+
 
 [node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
-margin_left = 208.0
-margin_right = 212.0
+margin_left = 212.0
+margin_right = 216.0
 margin_bottom = 40.0
 
 [node name="LabelContainer" parent="HBoxContainer" instance=ExtResource( 5 )]
+margin_left = 220.0
 margin_right = 650.0
 
 [node name="VSeparator4" type="VSeparator" parent="HBoxContainer"]
