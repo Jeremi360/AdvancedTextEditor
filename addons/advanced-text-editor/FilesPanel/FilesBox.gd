@@ -79,4 +79,5 @@ func _on_confirmed(f_box):
 	f_box.queue_free()
 	TextEditorHelper.files_ram.erase(f_box)
 	open_files.erase(f_box["path"])
+	TextEditorHelper.edit_container.text = ""
 
