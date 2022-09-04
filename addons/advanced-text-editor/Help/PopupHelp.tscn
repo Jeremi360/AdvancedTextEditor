@@ -14,13 +14,10 @@
 
 [node name="PopupHelp" type="WindowDialog"]
 visible = true
-margin_right = 1004.0
-margin_bottom = 590.0
+margin_right = 1028.0
+margin_bottom = 601.0
 rect_min_size = Vector2( 500, 100 )
 window_title = "Help"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HelperContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
@@ -37,8 +34,8 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="MarkdownCode" type="TextEdit" parent="HelperContainer/AT\'s Markdown"]
-margin_right = 684.0
-margin_bottom = 554.0
+margin_right = 708.0
+margin_bottom = 565.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "# Header Level 1
@@ -117,9 +114,9 @@ text_file = "res://addons/advanced-text-editor/docs/markdown.md"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json", "res://addons/advanced-text/highlights/markdown.json" ]
 
 [node name="MarkdownPreview" type="RichTextLabel" parent="HelperContainer/AT\'s Markdown"]
-margin_left = 696.0
-margin_right = 996.0
-margin_bottom = 554.0
+margin_left = 720.0
+margin_right = 1020.0
+margin_bottom = 565.0
 rect_min_size = Vector2( 300, 300 )
 mouse_filter = 2
 size_flags_vertical = 3
@@ -148,9 +145,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
-[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
-[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -208,9 +205,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 text in custom color from variable
 
-
-󰝰
-󰝰
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 
 
 
@@ -322,8 +319,8 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="RenPyCode" type="TextEdit" parent="HelperContainer/RenPy"]
-margin_right = 684.0
-margin_bottom = 554.0
+margin_right = 708.0
+margin_bottom = 565.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "\"\"\"
@@ -389,9 +386,9 @@ text_file = "res://addons/advanced-text-editor/docs/renpy.rpy"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
 [node name="RenPy" type="RichTextLabel" parent="HelperContainer/RenPy"]
-margin_left = 696.0
-margin_right = 996.0
-margin_bottom = 554.0
+margin_left = 720.0
+margin_right = 1020.0
+margin_bottom = 565.0
 rect_min_size = Vector2( 300, 300 )
 mouse_filter = 2
 size_flags_vertical = 3
@@ -420,9 +417,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
-[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
-[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -466,9 +463,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 text in custom color from variable
 
-
-󰝰
-󰝰
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 
 
 
@@ -558,8 +555,8 @@ __meta__ = {
 }
 
 [node name="BBCodeCode" type="TextEdit" parent="HelperContainer/Extendet BBCode"]
-margin_right = 684.0
-margin_bottom = 554.0
+margin_right = 708.0
+margin_bottom = 565.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "[h1]Header Level 1[/h1]
@@ -622,9 +619,9 @@ text_file = "res://addons/advanced-text-editor/docs/bbcode.txt"
 configs = [ "res://addons/advanced-text/highlights/bbcode.json" ]
 
 [node name="BBCode" type="RichTextLabel" parent="HelperContainer/Extendet BBCode"]
-margin_left = 696.0
-margin_right = 996.0
-margin_bottom = 554.0
+margin_left = 720.0
+margin_right = 1020.0
+margin_bottom = 565.0
 rect_min_size = Vector2( 300, 300 )
 mouse_filter = 2
 size_flags_vertical = 3
@@ -649,9 +646,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
-[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
-[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -694,9 +691,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 text in custom color from variable
 
-
-󰝰
-󰝰
+:grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 
 
 

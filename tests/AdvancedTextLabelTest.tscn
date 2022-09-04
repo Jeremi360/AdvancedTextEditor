@@ -43,7 +43,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-:grinning:
+[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
+[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
+[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -86,7 +88,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 text in custom color from variable
 
-:grinning:
+
+󰝰
+󰝰
 
 
 
@@ -128,6 +132,8 @@ test_dict.key1 = <test_dict.key1>
 [color=<test_color>]text in custom color from variable[/color]
 
 :grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -185,8 +191,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-
-:grinning:
+[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
+[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
+[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -231,7 +238,8 @@ test_dict.key1 = value1
 text in custom color from variable
 
 
-:grinning:
+󰝰
+󰝰
 
 
 
@@ -277,8 +285,9 @@ test_list[0] = <test_list[0]>
 test_dict.key1 = <test_dict.key1>
 {color=<test_color>}text in custom color from variable{/color}
 
-
 :grinning:
+{icon=folder-open}
+{icon=folder-open, 32}
 {img=res://icon.png}
 {img=res://icon.png size=24x24}
 
@@ -338,7 +347,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 [color=#1acfa0]text in custom color from variable[/color]
 
-:grinning:
+[img]res://addons/emojis-for-godot/emojis/16x16/1f600.tres[/img]
+[font=res://addons/material-design-icons/fonts/24.tres]󰝰[/font]
+[font=res://addons/material-design-icons/fonts/32.tres]󰝰[/font]
 [img]res://icon.png[/img]
 [img=24x24]res://icon.png[/img]
 
@@ -396,7 +407,9 @@ test_list[0] = 1
 test_dict.key1 = value1
 text in custom color from variable
 
-:grinning:
+
+󰝰
+󰝰
 
 
 
@@ -457,6 +470,8 @@ test_dict.key1 = <test_dict.key1>
 @color=<test_color> {text in custom color from variable}
 
 :grinning:
+[icon=folder-open]
+[icon=folder-open, 32]
 ![](res://icon.png)
 ![24x24](res://icon.png)
 

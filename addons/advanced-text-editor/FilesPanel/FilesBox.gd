@@ -17,10 +17,7 @@ func _on_session_loaded():
 	for file in TextEditorHelper.files_ram:
 		pass
 
-func new_file_tab(file_path : String, select: bool = false):
-	if file_path.empty():
-		return
-
+func new_file_tab(file_path : String, select := false, new_file := false):
 	print_debug("open file ", file_path)
 	var file_name = file_path.get_file()
 	var file_ext = file_path.get_extension()
@@ -44,13 +41,14 @@ func new_file_tab(file_path : String, select: bool = false):
 	
 	var f_modified_icon : TextureRect = f_box.get_node("ModifiedIcon")
 	f_modified_icon.texture = get_icon("Edit", "EditorIcons")
-	f_modified_icon.hide()
+	f_modified_icon.visible = true if new_file else false
 	
 	var text := ""
-	if f.file_exists(file_path):
-		f.open(file_path, File.READ)
-		text = f.get_as_text()
-		f.close()
+	if file_path != "":
+		if f.file_exists(file_path):
+			f.open(file_path, File.READ)
+			text = f.get_as_text()
+			f.close()
 		
 	var f_data := {
 		"f_button": f_button,
@@ -58,7 +56,7 @@ func new_file_tab(file_path : String, select: bool = false):
 		"file_ext": file_ext,
 		"path": file_path,
 		"text": text,
-		"modified": false,
+		"modified": true if new_file else false,
 		"modified_icon": f_modified_icon,
 	}
 	
@@ -78,7 +76,7 @@ func _on_file_close_button_pressed(f_box):
 	_on_confirmed(f_box)
 
 func _on_confirmed(f_box):
+	f_box.queue_free()
 	TextEditorHelper.files_ram.erase(f_box)
 	open_files.erase(f_box["path"])
-	f_box.queue_free()
 

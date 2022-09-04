@@ -8,6 +8,7 @@ export var configs_dict := {
 }
 
 func _ready():
+	TextEditorHelper.edit_container = self
 	TextEditorHelper.connect("selected_markup", self, "_on_markup_selected")
 	TextEditorHelper.connect("selected_file", self, "_on_file_selected")
 	connect("text_changed", self, "_on_text_changed")

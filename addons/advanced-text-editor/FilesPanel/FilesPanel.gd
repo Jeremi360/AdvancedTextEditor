@@ -28,10 +28,21 @@ func _on_save_as_file():
 
 func _on_file_selected(file_path:String):
 	match file_dialog.mode:
-		# FileDialog.MODE_OPEN_FILES:
-		# 	files_box.new_file_tab(file_path)
 		FileDialog.MODE_SAVE_FILE:
-			pass
+			var d := TextEditorHelper.current_f_data
+			if d == null:
+				var f := File.new()
+				f.open(file_path, File.WRITE)
+				var text := TextEditorHelper.edit_container.text
+				f.store_string(text)
+				f.close()
+			else:
+				d["modified"] = false
+				d["path"] = file_path
+				var f := File.new()
+				f.open(file_path, File.WRITE)
+				f.store_string(d["text"])
+				f.close()
 
 func _on_files_selected(file_paths:PoolStringArray):
 	match file_dialog.mode:
@@ -47,6 +58,11 @@ func _on_new_file():
 	files_box.new_file_tab("New Text File " + str(number))
 
 func _on_save_file():
-	pass
+	var d := TextEditorHelper.current_f_data
+	d["modified"] = false
+	var f := File.new()
+	f.open(d["path"], File.WRITE)
+	f.store_string(d["text"])
+	f.close()
 
 

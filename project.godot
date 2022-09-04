@@ -71,7 +71,7 @@ advanced_text_editor/preview_enabled="right"
 
 [application]
 
-config/name="AdvancedTextLabel"
+config/name="Advanced Text Editor"
 config/icon="res://icon.png"
 
 [autoload]

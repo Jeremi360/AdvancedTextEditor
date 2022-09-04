@@ -9,6 +9,7 @@ var markups := {"markdown":0, "renpy":1, "bbcode":2, "none":0}
 var current_markup := "markdown"
 var f := File.new()
 var current_f_data := {}
+var edit_container : CodeEdit
 
 signal session_loaded
 signal selected_mode(mode)

@@ -39,7 +39,4 @@ func _on_preview_toggled(toggle:bool):
 
 func _on_markup_selected(markup:String):
 	markup = markup.to_lower()
-	if markup in ["markdown", "renpy", "bbcode"]:
-		current_preview.markup = markup
-	else:
-		current_preview.visible = false
+	current_preview.markup = markup if markup in ["markdown", "renpy", "bbcode"] else false
