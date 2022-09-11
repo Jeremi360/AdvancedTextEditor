@@ -17,6 +17,11 @@ func _ready():
 	new_file_button.connect("pressed", self, "_on_new_file")
 	file_dialog.connect("file_selected", self, "_on_file_selected")
 	file_dialog.connect("files_selected", self, "_on_files_selected")
+	TextEditorHelper.connect("selected_mode", self, "_on_selected_mode")
+
+func _on_selected_mode(mode:String):
+	visible = mode == "file"
+	
 
 func _on_open_file():
 	file_dialog.mode = FileDialog.MODE_OPEN_FILES
