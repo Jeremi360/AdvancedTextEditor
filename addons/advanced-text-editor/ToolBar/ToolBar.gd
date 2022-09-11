@@ -1,8 +1,6 @@
 tool
 extends Control
 
-onready var file_icon := $HBoxContainer/LabelContainer/HBoxContainer/FileIcon
-onready var file_name := $HBoxContainer/LabelContainer/HBoxContainer/LabelContainer/HBoxContainer/FileName
 onready var preview_toggle := $HBoxContainer/PreviewOptions/PreviewToggle
 onready var preview_switch := $HBoxContainer/HBoxContainer/PreviewOptions/PreviewSwitch
 
