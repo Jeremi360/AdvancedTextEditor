@@ -80,6 +80,7 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 TextEditorHelper="*res://addons/advanced-text-editor/TextEditorHelper.gd"
+ATESettings="*res://addons/advanced-text-editor/ATESettings.gd"
 
 [debug]
 

@@ -8,10 +8,9 @@ var button_parent : Control
 var last_editor : Control
 
 func _enter_tree():
-	
-
 	if !ProjectSettings.has_setting("addons/advanced_text_editor/preview_enabled"):
 		ProjectSettings.set_setting("addons/advanced_text_editor/preview_enabled", "right")
+
 
 	ProjectSettings.add_property_info({
 		"name": "addons/advanced_text_editor/preview_enabled", 
@@ -20,11 +19,42 @@ func _enter_tree():
 		"hint_string": "right,bottom,none"
 	})
 
+	if !ProjectSettings.has_setting("addons/advanced_text_editor/preview_width"):
+		ProjectSettings.set_setting("addons/advanced_text_editor/preview_width", 100.0)
+
+	ProjectSettings.add_property_info({
+		"name": "addons/advanced_text_editor/preview_width", 
+		"type": TYPE_REAL,
+		"hint": PROPERTY_HINT_RANGE,
+		"hint_string": "100,600"
+	})
+	
+	if !ProjectSettings.has_setting("addons/advanced_text_editor/preview_height"):
+		ProjectSettings.set_setting("addons/advanced_text_editor/preview_height", 100.0)
+
+	ProjectSettings.add_property_info({
+		"name": "addons/advanced_text_editor/preview_height", 
+		"type": TYPE_REAL,
+		"hint": PROPERTY_HINT_RANGE,
+		"hint_string": "100,600"
+	})
+
+	if !ProjectSettings.has_setting("addons/advanced_text_editor/files_panel_width"):
+		ProjectSettings.set_setting("addons/advanced_text_editor/files_panel_width", 100.0)
+
+	ProjectSettings.add_property_info({
+		"name": "addons/advanced_text_editor/files_panel_width", 
+		"type": TYPE_REAL,
+		"hint": PROPERTY_HINT_RANGE,
+		"hint_string": "100,600"
+	})
+
 	load_and_enable_markup_edit()
 
 func load_and_enable_markup_edit():
 	# load ram / last file session
 	add_autoload_singleton("TextEditorHelper", "res://addons/advanced-text-editor/TextEditorHelper.gd")
+	add_autoload_singleton("ATESettings", "res://addons/advanced-text-editor/ATESettings.gd")
 
 	# load and add MarkupTextEditor to EditorUI
 	markup_text_editor = preload("Main.tscn")

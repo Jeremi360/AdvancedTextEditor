@@ -18,10 +18,13 @@ func _ready():
 	file_dialog.connect("file_selected", self, "_on_file_selected")
 	file_dialog.connect("files_selected", self, "_on_files_selected")
 	TextEditorHelper.connect("selected_mode", self, "_on_selected_mode")
+	connect("resized", self, "_on_resized")
+
+	rect_size.x = ATESettings.file_panel_width
+
 
 func _on_selected_mode(mode:String):
-	visible = mode == "file"
-	
+	visible = mode == "file"	
 
 func _on_open_file():
 	file_dialog.mode = FileDialog.MODE_OPEN_FILES
@@ -41,6 +44,7 @@ func _on_file_selected(file_path:String):
 				var text := TextEditorHelper.edit_container.text
 				f.store_string(text)
 				f.close()
+
 			else:
 				d["modified"] = false
 				d["path"] = file_path
@@ -70,4 +74,6 @@ func _on_save_file():
 	f.store_string(d["text"])
 	f.close()
 
+func _on_resized():
+	ATESettings.file_panel_width = rect_size.x
 
